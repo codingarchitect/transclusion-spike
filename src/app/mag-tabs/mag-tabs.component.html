@@ -1,3 +1,11 @@
 <ngb-tabset>
-  <ng-content></ng-content>
+  <ng-template ngFor let-tab [ngForOf]="tabs" let-i="index" let-odd="odd">
+    <ngb-tab title="{{tab.title}}">
+      <template ngbTabContent>
+        <ng-container *ngIf="tab && tab.contentTemplate && tab.contentTemplate.templateRef">
+          <ng-container *ngTemplateOutlet="tab.contentTemplate.templateRef; context: tab"></ng-container>          
+        </ng-container>
+      </template>
+    </ngb-tab>
+  </ng-template>
 </ngb-tabset>

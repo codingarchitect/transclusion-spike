@@ -6,14 +6,16 @@ import { HttpModule } from '@angular/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { MagTabComponent } from './mag-tab/mag-tab.component';
 import { MagTabsComponent } from './mag-tabs/mag-tabs.component';
+import { MagTabContentDirective } from './mag-tab/mag-tab-content.directive';
+import { MagTabDirective } from './mag-tab/mag-tab.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MagTabComponent,
-    MagTabsComponent
+    MagTabsComponent,
+    MagTabDirective,    
+    MagTabContentDirective
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ContentChildren, QueryList } from '@angular/core';
+import { MagTabDirective } from '../mag-tab/mag-tab.directive';
 
 @Component({
   selector: 'mag-tabs',
@@ -11,5 +12,7 @@ export class MagTabsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @ContentChildren(MagTabDirective) tabs: QueryList<MagTabDirective>;
 
 }
